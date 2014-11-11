@@ -47,9 +47,8 @@ DefinitionBlock ("AML/SSDT-UsbMuxLp.aml", "SSDT", 1, "Apple", "UsbMuxLp", 0x0000
                              0x00
                         }
                     }, Local0)
-                DTGP (Arg0, Arg1, Arg2, Arg3)
-                RefOf (Local0)
-                Return (Local0)
+                DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
+                            Return (Local0)
             }
 
             Method (XHCN, 0, NotSerialized)
@@ -80,24 +79,13 @@ DefinitionBlock ("AML/SSDT-UsbMuxLp.aml", "SSDT", 1, "Apple", "UsbMuxLp", 0x0000
                         0x00, 
                         0x00
                     })
-                    Name (_PLD, Package (0x10)  // _PLD: Physical Location of Device
+                    Name (_PLD, Package (One)  // _PLD: Physical Location of Device
                     {
-                        0x81, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x31, 
-                        0x1C, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00
+                        Buffer (0x14)
+                {
+                        0x81, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+                        0x31, 0x1C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                        }
                     })
                     Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
                     {
@@ -118,24 +106,13 @@ DefinitionBlock ("AML/SSDT-UsbMuxLp.aml", "SSDT", 1, "Apple", "UsbMuxLp", 0x0000
                         0x00, 
                         0x00
                     })
-                    Name (_PLD, Package (0x10)  // _PLD: Physical Location of Device
+                    Name (_PLD, Package (One)  // _PLD: Physical Location of Device
                     {
-                        0x81, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x30, 
-                        0x1C, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00
+                        Buffer (0x14)
+                {
+                        0x81, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+                        0x30, 0x1C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                        }
                     })
                     Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
                     {
@@ -195,9 +172,8 @@ DefinitionBlock ("AML/SSDT-UsbMuxLp.aml", "SSDT", 1, "Apple", "UsbMuxLp", 0x0000
                              0x00
                         }
                     }, Local0)
-                DTGP (Arg0, Arg1, Arg2, Arg3)
-                RefOf (Local0)
-                Return (Local0)
+                DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
+                            Return (Local0)
             }
 
             Method (XHCN, 0, NotSerialized)
@@ -228,24 +204,13 @@ DefinitionBlock ("AML/SSDT-UsbMuxLp.aml", "SSDT", 1, "Apple", "UsbMuxLp", 0x0000
                         0x00, 
                         0x00
                     })
-                    Name (_PLD, Package (0x10)  // _PLD: Physical Location of Device
+                    Name (_PLD, Package (One)  // _PLD: Physical Location of Device
                     {
-                        0x81, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x31, 
-                        0x1C, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00
+                        Buffer (0x14)
+                {
+                        0x81, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+                        0x31, 0x1C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                        }
                     })
                     Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
                     {
@@ -266,24 +231,13 @@ DefinitionBlock ("AML/SSDT-UsbMuxLp.aml", "SSDT", 1, "Apple", "UsbMuxLp", 0x0000
                         0x00, 
                         0x00
                     })
-                    Name (_PLD, Package (0x10)  // _PLD: Physical Location of Device
+                    Name (_PLD, Package (One)  // _PLD: Physical Location of Device
                     {
-                        0x81, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x30, 
-                        0x1C, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00
+                        Buffer (0x14)
+                {
+                        0x81, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+                        0x30, 0x1C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                        }
                     })
                     Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
                     {
@@ -372,9 +326,8 @@ DefinitionBlock ("AML/SSDT-UsbMuxLp.aml", "SSDT", 1, "Apple", "UsbMuxLp", 0x0000
                              0x00
                         }
                     }, Local0)
-                DTGP (Arg0, Arg1, Arg2, Arg3)
-                RefOf (Local0)
-                Return (Local0)
+                DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
+                            Return (Local0)
             }
 
             Method (XHCA, 0, NotSerialized)
@@ -432,10 +385,7 @@ DefinitionBlock ("AML/SSDT-UsbMuxLp.aml", "SSDT", 1, "Apple", "UsbMuxLp", 0x0000
                 MB14,   1, 
                 Offset (0xB4)
             }
-        }
 
-        Scope (\_SB.PCI0.XHC1)
-        {
             Method (_PS0, 0, Serialized)  // _PS0: Power State 0
             {
                 If (OSDW)
@@ -854,24 +804,13 @@ DefinitionBlock ("AML/SSDT-UsbMuxLp.aml", "SSDT", 1, "Apple", "UsbMuxLp", 0x0000
                         0x00, 
                         0x00
                     })
-                    Name (_PLD, Package (0x10)  // _PLD: Physical Location of Device
+                    Name (_PLD, Package (One)  // _PLD: Physical Location of Device
                     {
-                        0x81, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x31, 
-                        0x1C, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00
+                        Buffer (0x14)
+                {
+                        0x81, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+                        0x31, 0x1C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                        }
                     })
                     Name (MUXS, "EHCA")
                 }
@@ -886,24 +825,13 @@ DefinitionBlock ("AML/SSDT-UsbMuxLp.aml", "SSDT", 1, "Apple", "UsbMuxLp", 0x0000
                         0x00, 
                         0x00
                     })
-                    Name (_PLD, Package (0x10)  // _PLD: Physical Location of Device
+                    Name (_PLD, Package (One)  // _PLD: Physical Location of Device
                     {
-                        0x81, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x31, 
-                        0x1C, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00
+                        Buffer (0x14)
+                {
+                        0x81, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+                        0x31, 0x1C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                        }
                     })
                     Name (MUXS, "EHCB")
                 }
@@ -918,24 +846,13 @@ DefinitionBlock ("AML/SSDT-UsbMuxLp.aml", "SSDT", 1, "Apple", "UsbMuxLp", 0x0000
                         0x00, 
                         0x00
                     })
-                    Name (_PLD, Package (0x10)  // _PLD: Physical Location of Device
+                    Name (_PLD, Package (One)  // _PLD: Physical Location of Device
                     {
-                        0x81, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x30, 
-                        0x1C, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00
+                        Buffer (0x14)
+                {
+                        0x81, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+                        0x30, 0x1C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                        }
                     })
                 }
 
@@ -949,24 +866,13 @@ DefinitionBlock ("AML/SSDT-UsbMuxLp.aml", "SSDT", 1, "Apple", "UsbMuxLp", 0x0000
                         0x00, 
                         0x00
                     })
-                    Name (_PLD, Package (0x10)  // _PLD: Physical Location of Device
+                    Name (_PLD, Package (One)  // _PLD: Physical Location of Device
                     {
-                        0x81, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x30, 
-                        0x1C, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00
+                        Buffer (0x14)
+                {
+                        0x81, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+                        0x30, 0x1C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                        }
                     })
                 }
 
@@ -980,24 +886,13 @@ DefinitionBlock ("AML/SSDT-UsbMuxLp.aml", "SSDT", 1, "Apple", "UsbMuxLp", 0x0000
                         0x00, 
                         0x00
                     })
-                    Name (_PLD, Package (0x10)  // _PLD: Physical Location of Device
+                    Name (_PLD, Package (One)  // _PLD: Physical Location of Device
                     {
-                        0x81, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x31, 
-                        0x1C, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00
+                        Buffer (0x14)
+                {
+                        0x81, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+                        0x31, 0x1C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                        }
                     })
                 }
 
@@ -1011,24 +906,13 @@ DefinitionBlock ("AML/SSDT-UsbMuxLp.aml", "SSDT", 1, "Apple", "UsbMuxLp", 0x0000
                         0x00, 
                         0x00
                     })
-                    Name (_PLD, Package (0x10)  // _PLD: Physical Location of Device
+                    Name (_PLD, Package (One)  // _PLD: Physical Location of Device
                     {
-                        0x81, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x31, 
-                        0x1C, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00, 
-                        0x00
+                        Buffer (0x14)
+                {
+                        0x81, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+                        0x31, 0x1C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                        }
                     })
                 }
             }

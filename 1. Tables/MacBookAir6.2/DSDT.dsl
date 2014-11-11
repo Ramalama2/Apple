@@ -129,7 +129,7 @@ DefinitionBlock ("AML/DSDT.aml", "DSDT", 3, "APPLE", "MacBookA", 0x00060001)
     Name (PDBR, 0x4D)
     Name (WOWE, 0x00)
     Name (TAPD, 0x00)
-    OperationRegion (GNVS, SystemMemory, 0xFFFF0000, 0xAA55)
+    OperationRegion (GNVS, SystemMemory, 0xDAB07C18, 0x02B2)
     Field (GNVS, AnyAcc, Lock, Preserve)
     {
         OSYS,   16, 
